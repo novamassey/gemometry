@@ -1,6 +1,7 @@
 import "./MerchandiseListItem.css";
 
-export default function MerchandiseListItem({item}){
+export default function MerchandiseListItem({item, key}){
+    console.log(item);
     return (
     <>
     <h1>Merch List Item</h1>

@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="orders/new" element={<NewOrderPage />}/>
           <Route path="orders/" element={<OrderHistoryPage />}/>
-          <Route path="merchandise/" element={<MerchandisePage user={user}/>} />
+          <Route path="/" element={<MerchandisePage user={user}/>} />
         </Routes>
       </>
       :

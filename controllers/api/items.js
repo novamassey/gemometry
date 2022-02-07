@@ -7,7 +7,6 @@ module.exports = {
 
 async function index(req, res) {
   const items = await Item.find();
-  // re-sort based upon the sortOrder of the categories
   res.json(items);
   console.log(items);
 }
