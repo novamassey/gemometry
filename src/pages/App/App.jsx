@@ -6,6 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import MerchandisePage from "../MerchandisePage/MerchandisePage";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
+import MerchandiseDetailPage from "../MerchandiseDetailPage/MerchandiseDetailPage";
 import NavBar from "../../components/NavBar/NavBar";
 
 
@@ -24,7 +25,7 @@ function App() {
           <Route path="orders/new" element={<NewOrderPage />}/>
           <Route path="orders/" element={<OrderHistoryPage />}/>
           <Route path="/" element={<MerchandisePage user={user}/>} />
-          {/* <Route path="/itemsId" element={<MerchandiseDetailPage user={user}/>} /> */}
+          <Route path="/items/:id" element={<MerchandiseDetailPage user={user}/>} />
         </Routes>
       </>
       :
