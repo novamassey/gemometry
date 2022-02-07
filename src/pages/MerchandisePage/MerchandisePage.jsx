@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 import MerchandiseList from "../../components/MerchandiseList/MerchandiseList";
-import axios from "axios";
+import "./MerchandisePage.css";
 
 export default function MerchandisePage() {
     const[merchItems, setMerchItems] = useState([]);
@@ -15,15 +15,16 @@ export default function MerchandisePage() {
      useEffect(function() {
         async function getItems() {
           let items = await itemsAPI.getAll()
-          console.log(items);
           setMerchItems(items);
           }
           getItems();
         }, []);
 
     return (
-      <div>
-        <MerchandiseList merchItems={merchItems}/>
+      <div className="MerchandisePage">
+        <div className="card">
+          <MerchandiseList merchItems={merchItems}/>
+        </div>
       </div>
     );
 }

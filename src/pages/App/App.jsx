@@ -24,6 +24,7 @@ function App() {
           <Route path="orders/new" element={<NewOrderPage />}/>
           <Route path="orders/" element={<OrderHistoryPage />}/>
           <Route path="/" element={<MerchandisePage user={user}/>} />
+          {/* <Route path="/itemsId" element={<MerchandiseDetailPage user={user}/>} /> */}
         </Routes>
       </>
       :
