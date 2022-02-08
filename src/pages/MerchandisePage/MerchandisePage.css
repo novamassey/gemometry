@@ -1,9 +1,20 @@
+
+
 .MerchandisePage {
-    text-align: center;
-    min-width: 800px;
+    
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+    
+    
+    
 }
 
 .card {  
-  padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 

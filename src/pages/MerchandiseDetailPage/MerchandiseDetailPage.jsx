@@ -30,8 +30,8 @@ export default function MerchandiseDetailPage() {
                     <h2>{itemSingle && itemSingle.name}</h2>
                     <p>{itemSingle && itemSingle.description}</p>
                     <h2>${itemSingle && itemSingle.price}</h2>
-                    <div></div>
                 </div>
+                
             )
         }
 

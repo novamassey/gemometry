@@ -2,7 +2,12 @@
 .imageCard {
     height: 200px;
     width: 250px;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
     border:2px solid black;
-   
+}
+
+.image-title {
+    color:white;
 }
