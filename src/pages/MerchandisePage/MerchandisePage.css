@@ -1,20 +1,18 @@
 
 
-.MerchandisePage {
+.ImageCard {
     
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 20px;
-    
-    
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card {  
-    display: flex;
-    align-items: center;
+.card { 
+    float:  left;
+    width: 33%; 
+    /* grid-column-start: 2; */
+    /* align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: center; */
 }
 

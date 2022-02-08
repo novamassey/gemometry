@@ -17,7 +17,7 @@ export default function MerchandiseListItem({item}){
         
     </div> */}
 
-     <div className ="imageCard" style={{background: `url(${item.img_url_detail})`, backgroundSize: "cover"}}>>
+     <div className ="imageCard" style={{background: `url(${item.img_url_detail})`, backgroundSize: "cover"}}>
         <Link to={`/items/${item._id}`}>
             <div className="image-title">{item.name} ${item.price}</div>
         </Link>

@@ -21,8 +21,8 @@ export default function MerchandisePage() {
         }, []);
 
     return (
-      <div className="MerchandisePage row">
-        <div className="card column">
+      <div className="MerchandisePage">
+        <div className="card">
           <MerchandiseList merchItems={merchItems}/>
         </div>
       </div>
