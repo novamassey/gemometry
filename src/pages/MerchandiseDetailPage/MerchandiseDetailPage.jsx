@@ -27,8 +27,10 @@ export default function MerchandiseDetailPage() {
             console.log("Item Single", itemSingle)
             return (
                 <div>
-                    <h1>Detail page</h1>
-                    {itemSingle && itemSingle.name}
+                    <h2>{itemSingle && itemSingle.name}</h2>
+                    <p>{itemSingle && itemSingle.description}</p>
+                    <h2>${itemSingle && itemSingle.price}</h2>
+                    <div></div>
                 </div>
             )
         }
