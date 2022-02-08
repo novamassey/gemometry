@@ -6,21 +6,18 @@ import * as ordersAPI from "../../utilities/orders-api";
 export default function NewOrderPage() {
     let orderItems;
     const [cart, setCart] = useState({lineItems:[]})
-    // const [lineItems, setLineItems] = useState({})
     const isMounted = useRef(true);
 
     async function getOrder() {
         const cart = await ordersAPI.getCart()
         console.log(cart);
         setCart(cart);
-        // setLineItems(cart.lineItems);
-        // console.log(lineItems);
+     
     }
 
     useEffect(function() {
         if(isMounted.current) {
        getOrder();
-    //    itemFromOrders();
     }
     return () =>{
         isMounted.current = false
@@ -29,57 +26,21 @@ export default function NewOrderPage() {
   
    
 
-//     let items = []
-//     items = cart.lineItems
-//    console.log(items);
-//    const itemFromOrders =items.map(i => {
-//       <>
-//     <div>
-//         {i.qty}
-//     </div>
-    {/* <div>{i.name}</div> */}
-//        </>
-// })
-// async function itemFromOrders() {
-//     let items = await cart.lineItems
-//      orderItems = items.map(i =>{
-//     <div>
 
-//         <div>{i.qty}</div>
-//         </div>
-//      })
-// } 
 return (
     <>
-    <div>{cart._id}</div>
+    <div></div>
     <br/>
-    <div>{cart.totalQty}</div>
+    <div>Items in Cart:{cart.totalQty}</div>
     <div>{cart.lineItems.map(lineItem =>
+        <>
         <p>{lineItem.item.name}</p>
+        <p>{lineItem.item.qty}</p>
+         <img src={`${lineItem.item.img_url_list}`}></img>
+        <button>REMOVE</button>
+        </>
         )}</div>
     </>
 )
 
 }
-// return (
-//     <>
-//     {async function itemFromOrders() {
-//         let items = await cart.lineItems
-//         orderItems = items.map(i =>{
-//             <div>
-    
-//             <div>{i.qty}</div>
-//             </div>
-//          })}
-//         }    
-//         {itemFromOrders()}
-//         </>
-//     ) 
-// }
-
-// return (
-//     <div>
-//     {orderItems}
-//  </div>
-// ) 
-// }
