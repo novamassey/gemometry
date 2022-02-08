@@ -5,6 +5,8 @@ import{useState, useEffect, useRef} from "react";
 import {useParams, useNavigate} from "react-router-dom";  
 import * as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
+import NewOrderPage from "../NewOrderPage/NewOrderPage";
+import "./MerchandiseDetail.css";
 
 export default function MerchandiseDetailPage() {
 
@@ -24,6 +26,7 @@ export default function MerchandiseDetailPage() {
     async function handleAddToCart(itemId) {
         const cart =  await ordersAPI.addItemCart(itemId);
         setCart(cart);
+        console.log(cart);
         navigate('/orders/new');
 
     }
@@ -36,15 +39,16 @@ export default function MerchandiseDetailPage() {
             isMounted.current = false
          }
     }, []);
-            // console.log("Item Single", itemSingle)
+    <NewOrderPage item={itemSingle} />
             return (
                 <div>
                     <h2>{itemSingle && itemSingle.name}</h2>
                     <p>{itemSingle && itemSingle.description}</p>
                     <h2>${itemSingle && itemSingle.price}</h2>
-                    <div><img src="{`${itemSingle.img_url_detail}` || itemSingle}"></img></div>
-                    <button onClick={handleAddToCart}>ADD TO  CART</button>
+                    <div><img src="{itemSingle &&`${itemSingle.img_url_detail}`}"></img></div>
+                    <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
                 </div>
+                   
                 
             )
         }
