@@ -1,20 +1,40 @@
-
-/* //ImageCard class is from the component */
-.ImageCard {
-    float:  left;
-    width: 33%; 
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
-}
 .MerchandisePage {
-    display:flex;
+    /* display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-gap: 10px;
+    grid-auto-flow: column; */
+    /* display: inline-block;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, 200px); */
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    line-height: 300px; /* Should match your div height */
+    text-align: center;
 }
+
+/* .MerchandisePage > * {
+    height: 200px;
+}
+//ImageCard class is from the component
+.ImageCard {
+    flex: flex-wrap;
+    
+} */
 .card { 
-    flex: 1;
-    /* grid-column-start: 2; */
-    /* align-items: center;
+    /* grid-column-start: 2;
+    grid-column-start: 2;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center; */
-}
+     width: auto;
+    height: 100%;
+    vertical-align: middle;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+} 
 
