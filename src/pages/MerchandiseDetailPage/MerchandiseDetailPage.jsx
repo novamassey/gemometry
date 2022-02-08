@@ -31,6 +31,12 @@ export default function MerchandiseDetailPage() {
 
     }
 
+    async function getOrder() {
+        const cart = await ordersAPI.getCart()
+        console.log(cart);
+        setCart(cart);
+    }
+
     useEffect(function() {
          if(isMounted.current) {
         getItem();
@@ -39,13 +45,13 @@ export default function MerchandiseDetailPage() {
             isMounted.current = false
          }
     }, []);
-    <NewOrderPage item={itemSingle} />
+    <NewOrderPage item={itemSingle} cart={cart} getOrder={getOrder}/>
             return (
                 <div>
                     <h2>{itemSingle && itemSingle.name}</h2>
                     <p>{itemSingle && itemSingle.description}</p>
                     <h2>${itemSingle && itemSingle.price}</h2>
-                    <div><img src="{itemSingle &&`${itemSingle.img_url_detail}`}"></img></div>
+                    <div><img src={itemSingle &&`${itemSingle.img_url_detail}`}></img></div>
                     <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
                 </div>
                    
