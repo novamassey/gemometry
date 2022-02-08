@@ -9,3 +9,7 @@ export function addItemCart(itemId)  {
 export function getCart() {
     return sendRequest(`${BASE_URL}/cart`);
   }
+
+// export function getByItemOrderId(cartId) {
+//     return sendRequest(`${BASE_URL}/cart/items/${cartId}`)
+// }

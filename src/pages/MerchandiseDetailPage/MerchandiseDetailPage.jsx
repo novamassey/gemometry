@@ -27,7 +27,7 @@ export default function MerchandiseDetailPage() {
         const cart =  await ordersAPI.addItemCart(itemId);
         setCart(cart);
         console.log(cart);
-        navigate('/orders/new');
+        navigate('/orders/cart');
 
     }
 
