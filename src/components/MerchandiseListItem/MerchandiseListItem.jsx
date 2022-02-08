@@ -1,10 +1,10 @@
 import "./MerchandiseListItem.css";
 import {Link} from "react-router-dom";
 import MerchandiseDetailPage from "../../pages/MerchandiseDetailPage/MerchandiseDetailPage";
-import MerchandiseDetail from  "../MerchandiseDetail/MerchandiseDetail";
 
-export default function MerchandiseListItem({item, key}){
-    console.log(item);
+
+export default function MerchandiseListItem({item}){
+    
     return (
     <>
     <div className ="imageCard">
