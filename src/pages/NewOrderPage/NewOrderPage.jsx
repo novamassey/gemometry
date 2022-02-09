@@ -2,13 +2,13 @@ import {useRef, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import *  as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
+import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
 import "./NewOrderPage.css"
 
 
 export default function NewOrderPage() {
     const navigate = useNavigate();
     const [cart, setCart] = useState({lineItems:[]})
-    const [qty, setQty] = useState({})
     const isMounted = useRef(true);
 
     async function getOrder() {
@@ -38,9 +38,10 @@ export default function NewOrderPage() {
   async function handleCheckout() {
       await ordersAPI.checkout();
       navigate('/orders')
-      console.log(cart)
+     
   }     
-       
+   
+  
     
 
    
@@ -48,7 +49,7 @@ export default function NewOrderPage() {
 
 return (
     <>
-    
+    <OrderHistoryPage cart={cart}/>
     <div> 
 
     <div>Items in Cart:{cart.totalQty}</div>
