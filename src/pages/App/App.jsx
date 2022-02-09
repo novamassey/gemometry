@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
+import HomePage from "../HomePage/HomePage";
 import AuthPage from "../AuthPage/AuthPage";
 import MerchandisePage from "../MerchandisePage/MerchandisePage";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
@@ -21,7 +22,7 @@ function App() {
       user ?
       <>
         <NavBar user={user} setUser={setUser}/>
-        <Routes>
+      <Routes>  
           <Route path="orders/cart" element={<NewOrderPage />}/>
           <Route path="orders/" element={<OrderHistoryPage />}/>
           <Route path="/" element={<MerchandisePage user={user}/>} />
@@ -29,7 +30,12 @@ function App() {
         </Routes>
       </>
       :
+      <>
+      <Routes>
+        <Route path="home/" element={<HomePage />} />
+      </Routes>
       <AuthPage setUser={setUser}/>
+      </>
       }
      
     </main>

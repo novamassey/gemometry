@@ -18,7 +18,7 @@ export default function NavBar({user, setUser}){
         &nbsp; | &nbsp;
        <Link to ="/orders">Order History</Link> 
        &nbsp; | &nbsp;
-       <Link to ="/orders/new">New Order</Link> 
+       <Link to ="/orders/cart">Shopping Cart</Link> 
        &nbsp; | &nbsp;
        <span>Welcome, {user.name.toUpperCase()}!</span>
        &nbsp; | &nbsp;
