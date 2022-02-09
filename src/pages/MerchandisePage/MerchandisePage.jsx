@@ -22,9 +22,9 @@ export default function MerchandisePage() {
 
     return (
       <div className="MerchandisePage">
-        <div className="card">
+      
           <MerchandiseList merchItems={merchItems}/>
-        </div>
+      
       </div>
     );
 }

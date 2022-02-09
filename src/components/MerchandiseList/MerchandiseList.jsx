@@ -1,3 +1,5 @@
+
+import "./MerchandiseList.css";
 import MerchandiseListItem from "../MerchandiseListItem/MerchandiseListItem";
 
 

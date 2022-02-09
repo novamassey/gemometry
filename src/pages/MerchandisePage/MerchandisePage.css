@@ -4,16 +4,16 @@
 } */
 
 
-.MerchandisePage {
+/* .MerchandisePage {
     display: grid;
     grid-gap: 10px;
     flex-direction: column;
     grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
     
-}
+} */
 
 
-.card { 
+/* .card { 
     height: 200px;
-  } 
+  }  */
 

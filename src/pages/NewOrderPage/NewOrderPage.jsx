@@ -18,19 +18,19 @@ export default function NewOrderPage() {
     }
     
     async function changeQuantity(itemId, newQty) {
-         const cart = await ordersAPI.getCart()
+         const cart = await ordersAPI.setQty(itemId, newQty)
          console.log(cart)
          setCart(cart);
      }
     
-     async function minusQuantity(itemId){
-         const cart = await ordersAPI.getCart();
-         console.log(cart)
-         const item = cart.lineItems.find(lineItem => itemId === lineItem.item._id);
-         let qty = item.qty -=1
-         console.log(qty)
-         setCart(qty)
-  }
+//      async function minusQuantity(itemId){
+//          const cart = await ordersAPI.getCart();
+//          console.log(cart)
+//          const item = cart.lineItems.find(lineItem => itemId === lineItem.item._id);
+//          let qty = item.qty -=1
+//          console.log(qty)
+//          setCart(...cart,qty)
+//   }
      useEffect(function() {
         if(isMounted.current) {
        getOrder();
@@ -60,8 +60,8 @@ return (
         <br/>
         <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
         <p>{lineItem.qty}</p>
-        {/* <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button> */}
-        <button className="astext" onClick={() => minusQuantity(lineItem.item._id)}>-</button>
+        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
+        {/* <button className="astext" onClick={() => minusQuantity(lineItem.item._id)}>-</button> */}
         <br/>
          <img src={`${lineItem.item.img_url_list}`}></img>
         </>
