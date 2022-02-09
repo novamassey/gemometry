@@ -1,11 +1,12 @@
 import {useRef, useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import *  as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
 import "./NewOrderPage.css"
 
 
 export default function NewOrderPage() {
-    // let orderItems;
+    const navigate = useNavigate();
     const [cart, setCart] = useState({lineItems:[]})
     const [qty, setQty] = useState({})
     const isMounted = useRef(true);
@@ -34,7 +35,11 @@ export default function NewOrderPage() {
     }
    }, []);
 
-       
+  async function handleCheckout() {
+      await ordersAPI.checkout();
+      navigate('/orders')
+      console.log(cart)
+  }     
        
     
 
@@ -43,8 +48,9 @@ export default function NewOrderPage() {
 
 return (
     <>
-    <div></div>
-    <br/>
+    
+    <div> 
+
     <div>Items in Cart:{cart.totalQty}</div>
     <div>{cart.lineItems.map(lineItem =>
         <>
@@ -57,6 +63,8 @@ return (
          <img src={`${lineItem.item.img_url_list}`}></img>
         </>
         )}</div>
+        <button onClick={handleCheckout}>CHECKOUT</button>
+        </div>
     </>
 )
 

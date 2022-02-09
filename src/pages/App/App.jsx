@@ -32,7 +32,7 @@ function App() {
       :
       <>
       <Routes>
-        <Route path="home/" element={<HomePage />} />
+        {/* <Route path="home/" element={<HomePage />} /> */}
       </Routes>
       <AuthPage setUser={setUser}/>
       </>
