@@ -6,9 +6,9 @@ export default function MerchandiseList({merchItems}){
         <MerchandiseListItem key={item._id} item={item}/>
     );
     return (
-        <main>
+        <div className="container">
             {itemsFromDB}
-        </main>
+        </div>
     );
         
 }

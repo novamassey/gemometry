@@ -11,7 +11,7 @@ import "./MerchandiseDetail.css";
 export default function MerchandiseDetailPage() {
 
     const [itemSingle, setItemSingle] = useState();
-    const[cart, setCart] = useState(null);
+    const [cart, setCart] = useState(null);
     const {id} = useParams();
     const isMounted = useRef(true);
     
@@ -54,17 +54,9 @@ export default function MerchandiseDetailPage() {
                         <h2>{itemSingle && itemSingle.name}</h2>
                         <p>{itemSingle && itemSingle.description}</p>
                         <h2>${itemSingle && itemSingle.price}</h2>
-                        <form>
-                            <label>Quantity:</label>
-                            <select id="quantity">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                          
                             <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
-                        </form>
+                        
                         </div>
                             <div className="DetailImage"><img src={itemSingle &&`${itemSingle.img_url_detail}`}></img></div>
                     </div>

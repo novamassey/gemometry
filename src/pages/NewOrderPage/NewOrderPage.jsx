@@ -1,11 +1,13 @@
 import {useRef, useEffect, useState} from "react";
 import *  as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
+import "./NewOrderPage.css"
 
 
 export default function NewOrderPage() {
-    let orderItems;
+    // let orderItems;
     const [cart, setCart] = useState({lineItems:[]})
+    const [qty, setQty] = useState()
     const isMounted = useRef(true);
 
     async function getOrder() {
@@ -23,6 +25,11 @@ export default function NewOrderPage() {
         isMounted.current = false
     }
    }, []);
+
+   async function changeQuantity(itemId, newQty) {
+        const cartUpdate = await ordersAPI.setQty(itemId, newQty)
+        setCart(cartUpdate);
+   }
   
    
 
@@ -35,9 +42,12 @@ return (
     <div>{cart.lineItems.map(lineItem =>
         <>
         <p>{lineItem.item.name}</p>
-        <p>{lineItem.item.qty}</p>
+        <br/>
+        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
+        <p>{lineItem.qty}</p>
+        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
+        <br/>
          <img src={`${lineItem.item.img_url_list}`}></img>
-        <button>REMOVE</button>
         </>
         )}</div>
     </>

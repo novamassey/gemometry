@@ -13,3 +13,7 @@ export function getCart() {
 // export function getByItemOrderId(cartId) {
 //     return sendRequest(`${BASE_URL}/cart/items/${cartId}`)
 // }
+
+export function setQty(itemId, newQty) {
+    return sendRequest(`$BASE_URL}/cart/items/qty`, 'PUT', {itemId, newQty})
+}
