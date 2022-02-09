@@ -1,3 +1,23 @@
-img {
-    height: 200px;
+ /* body {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    
+/* } */
+
+.img {
+    height: 400px;
+    width: 450px;
+    overflow: hidden;
+    border:2px solid black;   
+}
+.DetailText > div  {
+    float: left;
+}
+
+.ImageDetail {
+    float:right;
+}
+
+div {
+    grid-column-start: 2;
 }
