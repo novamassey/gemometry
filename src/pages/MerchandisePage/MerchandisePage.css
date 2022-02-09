@@ -5,43 +5,15 @@
 
 
 .MerchandisePage {
-    /* grid-column-start:2; */
-    display:flex;
-    justify-content: space-between;
-    flex-flow:wrap;
-
-    /* grid-template-columns: repeat(auto-fill, minmax(186px, auto)); */
-    /* grid-template-rows: repeat(auto-fill, minmax(186px, auto)); */
-    /* grid-gap: 10px 10px; */
-    /* grid-auto-flow: auto;   */
-    /* position: fixed; */
-    /* display: inline-block;
+    display: grid;
     grid-gap: 10px;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fit, 200px); */
-    /* display: inline-block; */
-    /* display: flex; */
-    width: 100vw;
-    height: 100vh;
-    line-height: 300px; /* Should match your div height */
-    /* text-align: center; */
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+    
 }
 
 
 .card { 
-    display:flex;
-    /* position: relative; */
-    align-items:flex-start; 
-    /* justify-content: center; */ 
-    /* flex-wrap: wrap; */
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    /* overflow: auto; */
-    /* vertical-align: middle; */
-    /* background-size: contain;
-    background-position: center; */
-    /* background-repeat: no-repeat; */
-
-} 
+    height: 200px;
+  } 
 
