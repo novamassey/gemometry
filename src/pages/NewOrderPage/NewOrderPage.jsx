@@ -7,30 +7,38 @@ import "./NewOrderPage.css"
 export default function NewOrderPage() {
     // let orderItems;
     const [cart, setCart] = useState({lineItems:[]})
-    const [qty, setQty] = useState()
+    const [qty, setQty] = useState({})
     const isMounted = useRef(true);
 
     async function getOrder() {
         const cart = await ordersAPI.getCart()
-        console.log(cart);
+        // console.log(cart);
         setCart(cart);
      
     }
-
-    useEffect(function() {
+    
+    async function changeQuantity(itemId, newQty) {
+         const cart = await ordersAPI.getCart()
+         console.log(cart)
+         setQty(cart);
+     }
+    
+     useEffect(function() {
         if(isMounted.current) {
        getOrder();
+    //    changeQuantity(itemId, newQty);
     }
     return () =>{
         isMounted.current = false
     }
    }, []);
 
-   async function changeQuantity(itemId, newQty) {
-        const cartUpdate = await ordersAPI.setQty(itemId, newQty)
-        setCart(cartUpdate);
+   async function changeItemQuantity(itemId, qty){
+       const cart = await ordersAPI.getCart();
+       console.log(cart)
+
+
    }
-  
    
 
 
