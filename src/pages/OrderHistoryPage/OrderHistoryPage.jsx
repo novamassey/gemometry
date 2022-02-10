@@ -34,12 +34,12 @@ export default function OrderHistoryPage({user}){
             </div>
         )}
         </>
-        : 
-        <>
+        :  
+         <>
         <h3>You do have any orders with us yet, click below to start shopping!</h3>
         <Link to="/">START SHOPPING</Link>
-        </>
-        }
+        </> 
+         } 
         
     </>    
     )
