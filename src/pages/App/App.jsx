@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import HomePage from "../HomePage/HomePage";
 import AuthPage from "../AuthPage/AuthPage";
@@ -38,6 +38,7 @@ function App() {
         <Route path="/items/:id" element={<MerchandiseDetailPage user={user}/>} />
         <Route path="/" element={<MerchandisePage user={user}/>} />
         <Route path="/login" element={<AuthPage user ={user} setUser={setUser}/>} />
+        <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
       </>
       }
