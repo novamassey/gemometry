@@ -37,7 +37,7 @@ export default function NewOrderPage() {
 
   async function handleCheckout() {
       await ordersAPI.checkout();
-      navigate('/orders')
+      navigate('/orders/history')
      
   }     
    
@@ -49,12 +49,13 @@ export default function NewOrderPage() {
 
 return (
     <>
-    <OrderHistoryPage cart={cart}/>
+    
     <div> 
-
+    
     <div>Items in Cart:{cart.totalQty}</div>
     <div>{cart.lineItems.map(lineItem =>
         <>
+        
         <p>{lineItem.item.name}</p>
         <br/>
         <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
