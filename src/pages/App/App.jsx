@@ -23,18 +23,22 @@ function App() {
       <>
         <NavBar user={user} setUser={setUser}/>
       <Routes>  
-          <Route path="orders/cart" element={<NewOrderPage />}/>
-          <Route path="orders/history" element={<OrderHistoryPage user={user}/>}/>
-          <Route path="/" element={<MerchandisePage user={user}/>} />
+        <Route path="orders/history" element={<OrderHistoryPage user={user}/>}/>
+          <Route path="orders/cart" element={<NewOrderPage user ={user}/>}/>
           <Route path="/items/:id" element={<MerchandiseDetailPage user={user}/>} />
+          <Route path="/" element={<MerchandisePage user={user}/>} />
         </Routes>
       </>
       :
       <>
+      <NavBar user={user} setUser={setUser}/>
       <Routes>
         {/* <Route path="home/" element={<HomePage />} /> */}
+        <Route path="orders/cart" element={<NewOrderPage user ={user}/>}/>
+        <Route path="/items/:id" element={<MerchandiseDetailPage user={user}/>} />
+        <Route path="/" element={<MerchandisePage user={user}/>} />
+        <Route path="/login" element={<AuthPage setUser={setUser}/>} />
       </Routes>
-      <AuthPage setUser={setUser}/>
       </>
       }
      

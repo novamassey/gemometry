@@ -14,20 +14,34 @@ export default function NavBar({user, setUser}){
 
     return (
     <>
-    <div className="logo-container">
-       <img className="logo" src="/GEMOMETRYnarrowblack.png"></img>
-    </div>
-    <nav>
-        <Link to="/">JEWELRY</Link>
-        &nbsp; | &nbsp;
-       <Link to ="/orders/history">ORDER HISTORY</Link> 
-       &nbsp; | &nbsp;
-       <Link to ="/orders/cart">SHOPPING CART</Link> 
-       &nbsp; | &nbsp;
-       <span>Welcome, {user.name.toUpperCase()}!</span>
-       &nbsp; | &nbsp;
-       <Link onClick={handleLogOut} to="">LOG OUT</Link>
-    </nav>
+        <div className="logo-container">
+            <img className="logo" src="/GEMOMETRYnarrowblack.png"></img>
+        </div>
+        <nav>
+            { user ? 
+            <>
+            
+            <Link to="/">JEWELRY</Link>
+            &nbsp; | &nbsp;
+            <Link to ="/orders/cart">SHOPPING CART</Link> 
+            <Link to ="/orders/history">ORDER HISTORY</Link> 
+            &nbsp; | &nbsp;
+            <Link onClick={handleLogOut} to="">LOG OUT</Link>
+            &nbsp; | &nbsp;
+            <span>Welcome, {user.name.toUpperCase()}!</span>
+            </>
+            
+            :
+            <>
+            <Link to="/">JEWELRY</Link>
+            &nbsp; | &nbsp;
+            <Link to ="/orders/cart">SHOPPING CART</Link> 
+            &nbsp; | &nbsp;
+            <Link to ="/login">LOGIN/ SIGNUP</Link>
+            </>
+            
+            }
+        </nav>
     </>
     )
 }

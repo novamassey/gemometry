@@ -6,7 +6,7 @@ import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
 import "./NewOrderPage.css"
 
 
-export default function NewOrderPage() {
+export default function NewOrderPage({user}) {
     const navigate = useNavigate();
     const [cart, setCart] = useState({lineItems:[]})
     const isMounted = useRef(true);
@@ -69,7 +69,11 @@ return (
             {cart.totalQty ?
         <div>
             <p>Items in Cart:{cart.totalQty}</p>
+            {user ?
             <button onClick={handleCheckout}>CHECKOUT</button>
+            :
+            <Link to='/login'>LOGIN/SIGNUP TO CHECKOUT</Link>
+            }
         </div>
             :
     
