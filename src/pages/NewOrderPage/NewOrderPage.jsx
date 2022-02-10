@@ -63,7 +63,7 @@ return (
             <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
             <br/>
             <img src={`${lineItem.item.img_url_list}`}></img>
-            <p>${lineItem.item.orderTotal}</p>
+            <p>${lineItem.item.price}</p>
         </div>
             )}
             {cart.totalQty ?
