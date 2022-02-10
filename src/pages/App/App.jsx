@@ -37,7 +37,7 @@ function App() {
         <Route path="orders/cart" element={<NewOrderPage user ={user}/>}/>
         <Route path="/items/:id" element={<MerchandiseDetailPage user={user}/>} />
         <Route path="/" element={<MerchandisePage user={user}/>} />
-        <Route path="/login" element={<AuthPage setUser={setUser}/>} />
+        <Route path="/login" element={<AuthPage user ={user} setUser={setUser}/>} />
       </Routes>
       </>
       }

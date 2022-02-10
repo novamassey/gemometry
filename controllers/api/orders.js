@@ -18,6 +18,10 @@ async function getCart(req, res) {
     const cart = await Order.getCart(req.user._id);
     res.json(cart);
 }
+// async function cart(req, res) {
+//     const cart = await Order.getCart(req.user._id);
+//     res.json(cart);
+//   }
 
 async function setQuantity(req, res){
     const cart = await Order.getCart(req.user._id);

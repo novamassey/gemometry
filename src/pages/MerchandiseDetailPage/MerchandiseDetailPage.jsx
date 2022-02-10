@@ -2,13 +2,13 @@
 import MerchandiseListItem from "../../components/MerchandiseListItem/MerchandiseListItem";
 import "../../utilities/send-request";
 import{useState, useEffect, useRef} from "react"; 
-import {useParams, useNavigate} from "react-router-dom";  
+import {useParams, useNavigate, Link} from "react-router-dom";  
 import * as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import "./MerchandiseDetail.css";
 
-export default function MerchandiseDetailPage() {
+export default function MerchandiseDetailPage({user}) {
 
     const [itemSingle, setItemSingle] = useState();
     const [cart, setCart] = useState(null);
@@ -46,6 +46,7 @@ export default function MerchandiseDetailPage() {
          }
     }, []);
     <NewOrderPage item={itemSingle} cart={cart} getOrder={getOrder}/>
+    
             return (
                 <div>
                     <div className="MerchandiseDetailPage">
@@ -54,11 +55,15 @@ export default function MerchandiseDetailPage() {
                         <h2>{itemSingle && itemSingle.name}</h2>
                         <p>{itemSingle && itemSingle.description}</p>
                         <h2>${itemSingle && itemSingle.price}</h2>
-                          
-                            <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
                         
                         </div>
                             <div className="DetailImage"><img src={itemSingle &&`${itemSingle.img_url_detail}`}></img></div>
+                            { user ?
+                            <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
+                            :
+                         <Link to="/login">LOGIN/SIGN UP to ACCESS SHOPPING CART</Link> 
+                            }
+                        
                     </div>
                 </div>
                    
