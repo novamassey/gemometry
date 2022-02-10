@@ -13,16 +13,21 @@ export default function NavBar({user, setUser}){
     }
 
     return (
+    <>
+    <div className="logo-container">
+       <h2>GEM<img className="logo" src="/GEM.jpg"></img>METRY</h2>
+    </div>
     <nav>
         <Link to="/">JEWELRY</Link>
         &nbsp; | &nbsp;
-       <Link to ="/orders/history">Order History</Link> 
+       <Link to ="/orders/history">ORDER HISTORY</Link> 
        &nbsp; | &nbsp;
-       <Link to ="/orders/cart">Shopping Cart</Link> 
+       <Link to ="/orders/cart">SHOPPING CART</Link> 
        &nbsp; | &nbsp;
        <span>Welcome, {user.name.toUpperCase()}!</span>
        &nbsp; | &nbsp;
-       <Link onClick={handleLogOut} to="">Log Out</Link>
+       <Link onClick={handleLogOut} to="">LOG OUT</Link>
     </nav>
+    </>
     )
 }

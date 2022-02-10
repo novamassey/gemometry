@@ -1,10 +1,25 @@
 nav {
     background: black;
     color: white;
-    line-height: 25px;
+    line-height: 40px;
+    height:40px;
     
+}
+
+h2{
+    background-color:black;
+    color:white;
 }
 
 a {
     color:grey
+}
+
+.logo-container {
+    background-color: black;
+}
+
+.logo {
+    height:250px;
+    width: auto;
 }
