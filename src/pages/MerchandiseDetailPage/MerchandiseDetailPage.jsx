@@ -59,7 +59,7 @@ export default function MerchandiseDetailPage({user}) {
                         </div>
                             <div className="DetailImage"><img src={itemSingle &&`${itemSingle.img_url_detail}`}></img></div>
                             { user ?
-                            <button onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
+                            <button className="detailButton" onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
                             :
                          <Link to="/login">LOGIN/SIGN UP to ACCESS SHOPPING CART</Link> 
                             }
