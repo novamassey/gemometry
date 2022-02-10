@@ -15,7 +15,7 @@ export default function NavBar({user, setUser}){
     return (
     <>
     <div className="logo-container">
-       <h2>GEM<img className="logo" src="/GEM.jpg"></img>METRY</h2>
+       <img className="logo" src="/GEMOMETRYnarrowblack.png"></img>
     </div>
     <nav>
         <Link to="/">JEWELRY</Link>
