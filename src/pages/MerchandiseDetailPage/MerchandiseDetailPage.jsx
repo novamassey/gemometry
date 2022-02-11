@@ -64,12 +64,12 @@ export default function MerchandiseDetailPage({user}) {
                             <div className="DetailImage">
                                {image && <img onClick={handleChangeImage}src={itemSingle && itemSingle.img_url_detail} />}
                                 {!image  && <img onClick={handleChangeImage} src={itemSingle && itemSingle.img_url_list} />}
-                                {/* <button onClick={handleChangeImage}></button> */}
+                                
                             </div>
                             { user ?
                             <button className="detailButton" onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
                             :
-                         <Link to="/login">LOGIN/SIGN UP to ACCESS SHOPPING CART</Link> 
+                         <Link className="LinkDetail" to="/login">LOGIN/SIGN UP to ACCESS SHOPPING CART</Link> 
                             }
                         
                     </div>

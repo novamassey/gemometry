@@ -28,6 +28,11 @@
     position: relative;
     top: -200px;
     font-family: 'Marcellus SC', serif;
-    
-
+}
+.LinkDetail {
+    float: left;
+    grid-column-start: 2;
+    position: relative;
+    top: -200px;
+    font-family: 'Marcellus SC', serif;  
 }
