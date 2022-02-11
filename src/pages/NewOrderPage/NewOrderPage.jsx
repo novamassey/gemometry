@@ -48,13 +48,11 @@ export default function NewOrderPage({user}) {
 
 
 return (
-
-    <div>
-
-     
+<>
+     <>
     
-            {cart.lineItems.map(lineItem =>
-        <div>
+    {cart.lineItems.map(lineItem =>
+        <div className="CartItems">
             <p>{lineItem.item.name}</p>
             <br/>
             
@@ -64,26 +62,29 @@ return (
             <br/>
             <img src={`${lineItem.item.img_url_list}`}></img>
             <p>${lineItem.item.price}</p>
+            <p className="CartItems">Items in Cart:{lineItem.item.qty}</p>
         </div>
-            )}
-            {cart.totalQty ?
-        <div>
-            <p>Items in Cart:{cart.totalQty}</p>
-            {user ?
-            <button onClick={handleCheckout}>CHECKOUT</button>
-            :
-            <Link to='/login'>LOGIN/SIGNUP TO CHECKOUT</Link>
-            }
-        </div>
-            :
-    
-        <div>
-            <h2>Your shopping cart is empty, click the link to start shopping!</h2>
-            <Link to="/">START SHOPPING</Link>
-        </div>
-            }
-    </div>       
-
+        )}
+        </>
+       
+       <>
+       {/* {cart.lineItems.qty ?    
+       
+            <div>
+                <button onClick={handleCheckout}>CHECKOUT</button>
+              
+            </div>
+                
+                 : 
+                
+                <div>
+                <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
+                <Link className="ShoppingLink" to="/">START SHOPPING</Link>
+            </div>
+             } */}
+          </>  
+</>
 )
-
+           
 }
+            

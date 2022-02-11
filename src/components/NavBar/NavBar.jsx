@@ -29,15 +29,13 @@ export default function NavBar({user, setUser}){
             &nbsp; | &nbsp;
             <Link onClick={handleLogOut} to="">LOG OUT</Link>
             &nbsp; | &nbsp;
-            <span class="navGreet">Welcome, {user.name.toUpperCase()}!</span>
+            <span className="navGreet">Welcome, {user.name.toUpperCase()}!</span>
             <hr/>
             </>
             
             :
             <>
             <Link to="/">JEWELRY</Link>
-            &nbsp; | &nbsp;
-            <Link to ="/orders/cart">SHOPPING CART</Link> 
             &nbsp; | &nbsp;
             <Link to ="/login">LOGIN/ SIGNUP</Link>
             <hr/>

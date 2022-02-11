@@ -18,6 +18,9 @@ async function getCart(req, res) {
     const cart = await Order.getCart(req.user._id);
     res.json(cart);
 }
+    
+  
+
 // async function cart(req, res) {
 //     const cart = await Order.getCart(req.user._id);
 //     res.json(cart);
@@ -39,5 +42,4 @@ async function checkout(req, res) {
 async function index(req, res) {
     const orders = await Order.find({user :req.user._id, isPaid : true});
     res.json(orders);
-
 }

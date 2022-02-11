@@ -68,9 +68,11 @@ export default function MerchandiseDetailPage({user}) {
                             </div>
                             { user ?
                             <button className="detailButton" onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
-                            :
-                         <Link className="LinkDetail" to="/login">LOGIN/SIGN UP to ACCESS SHOPPING CART</Link> 
-                            }
+                        :
+                        <Link className="LinkDetail" to='/login'>LOGIN/SIGNUP TO ADD TO CART</Link>    
+                        }
+                          
+                            
                         
                     </div>
                 </div>
