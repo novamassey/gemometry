@@ -1,0 +1,6 @@
+.AuthPage {
+    margin-top: 200px;
+    display: inline-flex;
+    grid-template-rows: 1fr 1fr;
+    
+}
