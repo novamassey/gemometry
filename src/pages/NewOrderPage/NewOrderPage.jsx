@@ -7,71 +7,65 @@ import "./NewOrderPage.css"
 
 
 export default function NewOrderPage({user}) {
-    const navigate = useNavigate();
-    const [cart, setCart] = useState({lineItems:[]});
-    const isMounted = useRef(true);
+  const navigate = useNavigate();
+  const [cart, setCart] = useState({lineItems:[]});
+  const isMounted = useRef(true);
 
-    async function getOrder() {
-        const cart = await ordersAPI.getCart();
-        setCart(cart);
-     
-    }
+  async function getOrder() {
+    const cart = await ordersAPI.getCart();
+    setCart(cart);
+  }
     
-    async function changeQuantity(itemId, newQty) {
-         const cart = await ordersAPI.setQty(itemId, newQty);
-         setCart(cart);
-     }
+  async function changeQuantity(itemId, newQty) {
+    const cart = await ordersAPI.setQty(itemId, newQty);
+    setCart(cart);
+  }
     
-
-     useEffect(function() {
-        if(isMounted.current) {
-       getOrder();
-  
+  useEffect(function() {
+    if(isMounted.current) {
+      getOrder();
     }
     return () =>{
-        isMounted.current = false
+      isMounted.current = false
     }
-   }, []);
+  }, []);
 
   async function handleCheckout() {
-      await ordersAPI.checkout();
-      navigate('/orders/history');
-     
+    await ordersAPI.checkout();
+    navigate('/orders/history');
   }     
    
-return (
-<>
-     <>
-    
-        {cart.lineItems.map(lineItem =>
-        <div className="CartItems">
-            <p>{lineItem.item.name}</p>
-            <br/>
-            <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
-            <p>{lineItem.qty}</p>
-            <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
-            <br/>
-            <img src={`${lineItem.item.img_url_list}`}></img>
-            <p>${lineItem.item.price}</p>
-            <p className="CartItems">Items in Cart:{lineItem.item.qty}</p>
-        </div>
-        )}
-        </>
+  return (
+  <>
     <>
-       
-        {cart.lineItems.length ?
-        <div>
-            <button onClick={handleCheckout}>CHECKOUT</button>
-        </div>
-        : 
-        <div>
-            <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
-            <Link className="ShoppingLink" to="/">START SHOPPING</Link>
-        </div>
-        }
+    {cart.lineItems.map(lineItem =>
+      <div className="CartItems">
+        <p>{lineItem.item.name}</p>
+        <br/>
+        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
+        <p>{lineItem.qty}</p>
+        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
+        <br/>
+        <img src={`${lineItem.item.img_url_list}`}></img>
+        <p>${lineItem.item.price}</p>
+        <p className="CartItems">Items in Cart:{lineItem.item.qty}</p>
+      </div>
+    )}
+    </>
+    <>
+    {cart.lineItems.length ?
+      <div>
+        <button onClick={handleCheckout}>CHECKOUT</button>
+      </div>
+    : 
+    <div>
+      <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
+      <Link className="ShoppingLink" to="/">START SHOPPING</Link>
+    </div>
+    }
                  
-    </>  
+  </>  
 </>
-    )
+  )
 }
             

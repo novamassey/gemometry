@@ -5,42 +5,38 @@ import { useState, useEffect } from "react";
 import "./OrderHistoryPage.css";
 
 export default function OrderHistoryPage({user}){
-    const[orderHistory, setOrderHistory] = useState([{lineItems:[]}])
+  const[orderHistory, setOrderHistory] = useState([{lineItems:[]}])
 
-    useEffect(function() {
-        async function getOrders() {
-            const orders = await ordersAPI.getAll()
-            console.log(orders);
-            setOrderHistory(orders);
-            console.log("OrderHistoryPage:", orders)
+  useEffect(function() {
+    async function getOrders() {
+      const orders = await ordersAPI.getAll();
+      setOrderHistory(orders);
     }
     getOrders();
-}   , []);
+  }, []);
 
-    return (
+  return (
     <>
-        {orderHistory.length ?
-        <>
+      {orderHistory.length ?
+      <>
         <h3 className="greeting">Hello {user.name.toUpperCase()}! Here are your recent orders, THANK YOU FOR SHOPPING WITH US!</h3>
         {orderHistory.map(orders => 
-            <div>
-                <p className="reference">Reference No: {orders.orderId}</p>
-                <p className="qty">Quantity: {orders.totalQty}</p>
-                {console.log(orders.totalQty)}
-                <p className="total">Total: $ {orders.orderTotal}</p>
+          <div>
+            <p className="reference">Reference No: {orders.orderId}</p>
+            <p className="qty">Quantity: {orders.totalQty}</p>
+            <p className="total">Total: $ {orders.orderTotal}</p>
             {orders.lineItems.map(items =>
-                <img className="history-image" src={`${items.item.img_url_list}`}></img> 
-                )}
-            </div>
+            <img className="history-image" src={`${items.item.img_url_list}`}></img> 
         )}
-        </>
-        :  
-         <>
+          </div>
+      )}
+      </>
+      :  
+      <>
         <h3>You do have any orders with us yet, click below to start shopping!</h3>
         <Link to="/">START SHOPPING</Link>
-        </> 
-         } 
-        
+      </> 
+      } 
     </>    
-    )
+  )
 }
