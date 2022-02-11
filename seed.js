@@ -46,6 +46,12 @@ const Item = require('./models/item');
     img_url_list: 'https://i.imgur.com/3K6E8l1.jpg',
     img_url_detail: 'https://i.imgur.com/3K6E8l1.jpg',
     img_url_detail_extra:''},
+    {name: 'Lime Green Starburst', 
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nisi consequatur ab facilis modi ipsum, dolores dolorem repudiandae reiciendis unde magnam quo asperiores delectus corrupti repellat provident placeat, omnis error',  
+    price: 30, 
+    img_url_list: 'https://i.imgur.com/pG5urVR.png',
+    img_url_detail: 'https://i.imgur.com/3K6E8l1.jpg',
+    img_url_detail_extra:''},
   ]);
 
   console.log(items)

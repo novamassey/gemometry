@@ -15,7 +15,7 @@ export default function NavBar({user, setUser}){
     return (
     <>
         <div className="logo-container">
-            <img className="logo" src="/GEMOMETRYnarrowblack.png"></img>
+            <img className="logo" src=""></img>
         </div>
         <nav className="navText">
             { user ? 

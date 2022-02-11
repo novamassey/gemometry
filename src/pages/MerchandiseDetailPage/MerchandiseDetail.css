@@ -15,8 +15,12 @@
     height: 400px;
     width: 450px;
     overflow: hidden;
+    transition: transform .4s ease-in-out;
 }
-
+.DetailImage:hover {
+    transform: scale(1.15);
+    transform-origin: center; 
+}
 
 .detailButton {
     float: left;
