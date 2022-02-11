@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const itemsCtrl = require('../../controllers/api/items');
 
-//mounnted in server.js as '/api/items'
+//mounted in server.js as '/api/items'
 
 // GET /api/items
 router.get('/', itemsCtrl.index);
