@@ -68,21 +68,24 @@ return (
         </>
        
        <>
-       {cart.lineItems.qty ?    
-       
+       {/* {cart.lineItems.map(lineItem =>
+           {lineItem.qty >= 1 ?   */}
+           {cart.lineItems.length ?
+            
             <div>
                 <button onClick={handleCheckout}>CHECKOUT</button>
               
             </div>
                 
-                 : 
+                : 
                 
                 <div>
                 <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
                 <Link className="ShoppingLink" to="/">START SHOPPING</Link>
             </div>
              }
-          </>  
+                 
+        </>  
 </>
 )
            
