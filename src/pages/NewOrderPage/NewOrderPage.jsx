@@ -8,19 +8,17 @@ import "./NewOrderPage.css"
 
 export default function NewOrderPage({user}) {
     const navigate = useNavigate();
-    const [cart, setCart] = useState({lineItems:[]})
+    const [cart, setCart] = useState({lineItems:[]});
     const isMounted = useRef(true);
 
     async function getOrder() {
-        const cart = await ordersAPI.getCart()
-        console.log(cart);
+        const cart = await ordersAPI.getCart();
         setCart(cart);
      
     }
     
     async function changeQuantity(itemId, newQty) {
-         const cart = await ordersAPI.setQty(itemId, newQty)
-         console.log(cart)
+         const cart = await ordersAPI.setQty(itemId, newQty);
          setCart(cart);
      }
     
@@ -37,25 +35,18 @@ export default function NewOrderPage({user}) {
 
   async function handleCheckout() {
       await ordersAPI.checkout();
-      navigate('/orders/history')
+      navigate('/orders/history');
      
   }     
    
-  
-    
-
-   
-
-
 return (
 <>
      <>
     
-    {cart.lineItems.map(lineItem =>
+        {cart.lineItems.map(lineItem =>
         <div className="CartItems">
             <p>{lineItem.item.name}</p>
             <br/>
-            
             <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
             <p>{lineItem.qty}</p>
             <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
@@ -66,28 +57,21 @@ return (
         </div>
         )}
         </>
+    <>
        
-       <>
-       {/* {cart.lineItems.map(lineItem =>
-           {lineItem.qty >= 1 ?   */}
-           {cart.lineItems.length ?
-            
-            <div>
-                <button onClick={handleCheckout}>CHECKOUT</button>
-              
-            </div>
-                
-                : 
-                
-                <div>
-                <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
-                <Link className="ShoppingLink" to="/">START SHOPPING</Link>
-            </div>
-             }
+        {cart.lineItems.length ?
+        <div>
+            <button onClick={handleCheckout}>CHECKOUT</button>
+        </div>
+        : 
+        <div>
+            <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
+            <Link className="ShoppingLink" to="/">START SHOPPING</Link>
+        </div>
+        }
                  
-        </>  
+    </>  
 </>
-)
-           
+    )
 }
             

@@ -10,19 +10,17 @@ export default function AuthPage({ setUser }) {
 
     function handleNavigate() {
       navigate('/');
-
     }
 
   return (
     <main>
       <div className="AuthPage">
-
-      <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
-      { showSignUp ?
+        <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
+        { showSignUp ?
         <SignUpForm setUser={setUser} handleNavigate={handleNavigate}/>
         :
         <LoginForm setUser={setUser} />
-      }
+        }
       </div>
     </main>
   );
