@@ -68,7 +68,7 @@ return (
         </>
        
        <>
-       {/* {cart.lineItems.qty ?    
+       {cart.lineItems.qty ?    
        
             <div>
                 <button onClick={handleCheckout}>CHECKOUT</button>
@@ -81,7 +81,7 @@ return (
                 <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
                 <Link className="ShoppingLink" to="/">START SHOPPING</Link>
             </div>
-             } */}
+             }
           </>  
 </>
 )
