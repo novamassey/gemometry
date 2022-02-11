@@ -15,7 +15,7 @@ export default function NavBar({user, setUser}){
     return (
     <>
         <div className="logo-container">
-            <img className="logo" src=""></img>
+            <img className="logo" src="/GEMsimple.png"></img>
         </div>
         <nav className="navText">
             { user ? 
@@ -29,7 +29,8 @@ export default function NavBar({user, setUser}){
             &nbsp; | &nbsp;
             <Link onClick={handleLogOut} to="">LOG OUT</Link>
             &nbsp; | &nbsp;
-            <span>Welcome, {user.name.toUpperCase()}!</span>
+            <span class="navGreet">Welcome, {user.name.toUpperCase()}!</span>
+            <hr/>
             </>
             
             :
@@ -39,6 +40,7 @@ export default function NavBar({user, setUser}){
             <Link to ="/orders/cart">SHOPPING CART</Link> 
             &nbsp; | &nbsp;
             <Link to ="/login">LOGIN/ SIGNUP</Link>
+            <hr/>
             </>
             
             }

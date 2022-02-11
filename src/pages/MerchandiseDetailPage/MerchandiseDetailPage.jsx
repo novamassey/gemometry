@@ -12,7 +12,6 @@ export default function MerchandiseDetailPage({user}) {
 
     const [itemSingle, setItemSingle] = useState();
     const [cart, setCart] = useState(null);
-    const [image, setImage] = useState(true);
     const {id} = useParams();
     const isMounted = useRef(true);
     
@@ -31,9 +30,9 @@ export default function MerchandiseDetailPage({user}) {
         navigate('/orders/cart');
 
     }
-    async function handleChangeImage() {
-        setImage(!image)
-    }
+    // async function handleChangeImage() {
+    //     setImage(!image)
+    // }
 
     async function getOrder() {
         const cart = await ordersAPI.getCart()
@@ -62,9 +61,9 @@ export default function MerchandiseDetailPage({user}) {
                         
                         </div>
                             <div className="DetailImage">
-                               {image && <img src={itemSingle && itemSingle.img_url_detail} />}
-                                {!image  && <img src={itemSingle && itemSingle.img_url_list} />}
-                                <button onClick={handleChangeImage}></button>
+                               <img src={itemSingle && itemSingle.img_url_detail} />
+                                
+                                
                             </div>
                             { user ?
                             <button className="detailButton" onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>

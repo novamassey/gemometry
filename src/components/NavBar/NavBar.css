@@ -1,21 +1,27 @@
 nav {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     line-height: 40px;
     height:40px;
     
 }
 
 
-.navText {
+.navText > a {
     font-family: 'Marcellus SC', serif;;
     font-size:25px;
-    color: white;
+    color: black;
     text-decoration: none;
+}
+.navGreet {
+    font-family: 'Marcellus SC', serif;;
+    font-size:18px; 
 }
 
 .logo-container {
-    background-color: black;
+    background-color: white;
+    height:75%;
+    width:100%
 }
 
 .logo {
