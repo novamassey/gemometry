@@ -1,0 +1,25 @@
+.form-container {
+    margin-top: 200px;
+    grid-template-rows: 1fr;
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    width: 80%;
+    margin: 0 auto;
+}
+.LoginLabel {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+.LoginInput {
+    display: inline-block;
+    width: 30%;
+    margin: 0 30% 0 4%;
+}
+
+.LoginButton {
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    margin:10px;
+}

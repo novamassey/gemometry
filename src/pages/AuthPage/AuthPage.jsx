@@ -15,7 +15,7 @@ export default function AuthPage({ setUser }) {
   return (
     <main>
       <div className="AuthPage">
-        <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
+        <button className="ToggleButton" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'LOG IN PAGE' : 'SIGN UP PAGE'}</button>
         { showSignUp ?
         <SignUpForm setUser={setUser} handleNavigate={handleNavigate}/>
         :

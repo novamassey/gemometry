@@ -1,6 +1,14 @@
-.AuthPage {
+/* .AuthPage{
+
+} */
+
+.ToggleButton {
     margin-top: 200px;
-    display: inline-flex;
-    grid-template-rows: 1fr 1fr;
-    
-}
+    display: flex;
+    border-radius: .5;
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    align-content:center;
+    cursor: pointer;
+  } 
+  
