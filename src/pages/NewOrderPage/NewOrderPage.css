@@ -1,3 +1,23 @@
+.CartItems {
+    display:inline-block;
+    grid-template-rows:inherit;
+    font-family: 'Marcellus SC', serif;
+    color:black;
+}
+.CartItemName {
+    font-size: 22px;
+}
+.CartItemImage {
+    height:300px;
+}
+.CartItemPrice {
+    font-size:22px;
+}
+
+.CartItemQty {
+    font-size: 18px;
+}
+
 .astext {
     background:none;
     border:none;
@@ -11,7 +31,3 @@
     /* text-decoration: none;   */
 }
 
-.CartItems {
-    font-family: 'Marcellus SC', serif;
-    color:black;
-}

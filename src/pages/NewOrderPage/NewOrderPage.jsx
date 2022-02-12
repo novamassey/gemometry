@@ -40,22 +40,22 @@ export default function NewOrderPage({user}) {
     <>
     {cart.lineItems.map(lineItem =>
       <div className="CartItems">
-        <p>{lineItem.item.name}</p>
+        <p className="CartItemName">{lineItem.item.name}</p>
         <br/>
         <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
         <p>{lineItem.qty}</p>
         <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
         <br/>
-        <img src={`${lineItem.item.img_url_list}`}></img>
-        <p>${lineItem.item.price}</p>
-        <p className="CartItems">Items in Cart: {lineItem.qty}</p>
+        <img className="CartItemImage" src={`${lineItem.item.img_url_list}`}></img>
+        <p className="CartItemPrice">${lineItem.item.price}</p>
+        <p className="CartItemQty">Items in Cart: {lineItem.qty}</p>
       </div>
     )}
     </>
     <>
     {cart.lineItems.length ?
       <div>
-        <button onClick={handleCheckout}>CHECKOUT</button>
+        <button className="CartCheckoutButton" onClick={handleCheckout}>CHECKOUT</button>
       </div>
     : 
     <div>
