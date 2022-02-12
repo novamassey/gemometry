@@ -56,7 +56,7 @@ export default function NewOrderPage({user}) {
     </>
     <>
     {cart.lineItems.length ?
-      <div>
+      <div className="CheckoutDiv">
         <button className="CartCheckoutButton" onClick={handleCheckout}>CHECKOUT</button>
       </div>
     : 

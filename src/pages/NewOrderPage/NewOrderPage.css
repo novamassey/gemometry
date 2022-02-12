@@ -35,7 +35,8 @@
     color:black;
     /* text-decoration: none;   */
 }
-.CartCheckOutButton {
+.CartCheckoutButton {
     font-family: 'Marcellus SC', serif;
     color:black;
+    font-size:18px;
 }
