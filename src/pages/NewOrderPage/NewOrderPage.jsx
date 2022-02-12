@@ -62,6 +62,7 @@ export default function NewOrderPage({user}) {
     : 
     <div>
       <h2 className="CartItems">Your shopping cart is empty, click the link to start shopping!</h2>
+      <br />
       <Link className="ShoppingLink" to="/">START SHOPPING</Link>
     </div>
     }
