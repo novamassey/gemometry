@@ -42,9 +42,11 @@ export default function NewOrderPage({user}) {
       <div className="CartItems">
         <p className="CartItemName">{lineItem.item.name}</p>
         <br/>
-        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
-        <p>{lineItem.qty}</p>
-        <button className="astext" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
+        <div className="CartQty">
+          <button className="astext plus" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty + 1)}>+</button>
+          <p>{lineItem.qty}</p>
+          <button className="astext minus" onClick={() => changeQuantity(lineItem.item._id, lineItem.qty - 1)}>-</button>
+        </div>
         <br/>
         <img className="CartItemImage" src={`${lineItem.item.img_url_list}`}></img>
         <p className="CartItemPrice">${lineItem.item.price}</p>

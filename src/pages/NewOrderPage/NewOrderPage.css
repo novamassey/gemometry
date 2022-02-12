@@ -13,6 +13,11 @@
 .CartItemPrice {
     font-size:22px;
 }
+.CartQty{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 .CartItemQty {
     font-size: 18px;
@@ -30,4 +35,7 @@
     color:black;
     /* text-decoration: none;   */
 }
-
+.CartCheckOutButton {
+    font-family: 'Marcellus SC', serif;
+    color:black;
+}
