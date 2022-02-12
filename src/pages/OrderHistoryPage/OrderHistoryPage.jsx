@@ -19,15 +19,22 @@ export default function OrderHistoryPage({user}){
     <>
       {orderHistory.length ?
       <>
-        <h3 className="greeting">Hello {user.name.toUpperCase()}! Here are your recent orders, THANK YOU FOR SHOPPING WITH US!</h3>
+        <h3 className="OrderGreeting">Hello {user.name.toUpperCase()}! Here are your recent orders, THANK YOU FOR SHOPPING WITH US!</h3>
         {orderHistory.map(orders => 
-          <div>
-            <p className="reference">Reference No: {orders.orderId}</p>
-            <p className="qty">Quantity: {orders.totalQty}</p>
-            <p className="total">Total: $ {orders.orderTotal}</p>
+          <div className="OrderDetailsContainer">
+            <div className="OrderText">
+              <hr/>
+              <p className="OrderReference">Reference No: {orders.orderId}</p>
+              <p className="OrderQty">Quantity: {orders.totalQty}</p>
+              <p className="OrderTotal">Total: $ {orders.orderTotal}</p>
+            </div>
             {orders.lineItems.map(items =>
-            <img className="history-image" src={`${items.item.img_url_list}`}></img> 
+            <div className="OrderImage">
+              <p>{items.item.name}</p>
+              <img className="HistoryImage" src={`${items.item.img_url_list}`}></img> 
+            </div>
         )}
+        <hr/>
           </div>
       )}
       </>

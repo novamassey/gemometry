@@ -1,4 +1,23 @@
-.history-image {
+.OrderGreeting {
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    font-size:18px;
+}
+
+.OrderDetailsContainer {
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    font-size:18px;
+}
+
+.OrderImage {
+  display:inline-block;
+  margin: 0 10px 0 10px;
+
+}
+
+.HistoryImage {
     height: 100px;
+    ; 
 
 }
