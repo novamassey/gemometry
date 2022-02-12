@@ -48,7 +48,7 @@ export default function NewOrderPage({user}) {
         <br/>
         <img src={`${lineItem.item.img_url_list}`}></img>
         <p>${lineItem.item.price}</p>
-        <p className="CartItems">Items in Cart:{lineItem.item.qty}</p>
+        <p className="CartItems">Items in Cart: {lineItem.qty}</p>
       </div>
     )}
     </>
