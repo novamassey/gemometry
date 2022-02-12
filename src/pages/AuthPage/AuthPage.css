@@ -1,14 +1,19 @@
-/* .AuthPage{
-
-} */
+.AuthPage{
+ grid-template-columns: 1fr 1fr 1fr;
+}
 
 .ToggleButton {
-    margin-top: 200px;
-    display: flex;
+    margin-top: 100px;
     border-radius: .5;
     font-family: 'Marcellus SC', serif;
-    color:black;
+    font-size:30px;
+    color: white;
+    background-color:black;
     align-content:center;
     cursor: pointer;
+    grid-column-start: 2;
+    margin-bottom: 50px; 
+    border-radius: 50%; 
+    padding:20px; 
   } 
   

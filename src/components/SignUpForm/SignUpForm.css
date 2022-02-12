@@ -1,0 +1,31 @@
+.SignUpForm {
+    margin-top: 200px;
+    display:inline-block;
+    grid-template-rows: 1fr;
+    font-family: 'Marcellus SC', serif;
+    color:black;
+    width: 400px;
+    margin: 0 auto;
+   
+}
+.SignUpLabel {
+    display: inline-block;
+    width: 30%;
+    /* text-align: right; */
+}
+
+.SignInput {
+    display: inline-block;
+    width: 30%;
+    /* margin: 0 30% 0 4%; */
+   
+}
+
+.SignUpButton {
+    /* display:flex; */
+    font-family: 'Marcellus SC', serif;
+    /* color:black; */
+    margin:10px;
+    /* justify-items: center; */
+   
+}
