@@ -2,21 +2,21 @@
 
 A store front application for an old ETSY store that sells handcrafted jewelry made of natural gemstones. ETSY requires fees for advertising and listing on their application so having a dedicted website is essential for a business in 2022.
 
-## Issues with ETSY
+### Issues with ETSY
 ETSY is an incredible application that helps connect handmade sellers with buyers the world over. However, being an ETSY store owner can be incredibly difficult and even costly. For beginners, it can be incredibly difficult to have your products seen by potential buyers since the algorithm prioritizes successful past merchandise sales in their search bar.  For seasoned sellers, it can be costly to pay for advertsing, transaction and post fees once you have establised a customer base.
 
-## Importance of Having a Dedicated Site
+### Importance of Having a Dedicated Site
 Due to ETSY's costs and limitations it is important to have a dedicated storefront.  Through ETSY sales you can send business cards with the contact information for your dedicated site so the customer can purchase directly from you in the future. This saves both the seller and buyer from transaction costs, and enables the seller in particular to build up their own separate customer base they can market to directly.
 
 
 Screen Shots of the App
 ---
-### Merchandise Page
+#### Merchandise Page
 >The application lands on the merchandise list page to engage customers to participate in the shopping experience.
 
 <img src = "">
 
-### Detail Page
+#### Detail Page
 >By clicking a link on the merchandise page you will be taken to a detail page, with some photos to toggle through to see the merchandise in different scenes. 
 
 <img src = "">
@@ -57,5 +57,6 @@ Screen Shots of the App
 * I would like for users who have made purchases to be able to create, edit and delete reviews on their merchandise purchase.
 * I would like to implement the Stripe API to allow for actual purchases.
 * I would like to create an admin user that can create new posts for items for sale.
+* I would like to have a message capability so customers can iniate returns with the buyer/admin.
 
 
