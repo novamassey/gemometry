@@ -17,6 +17,7 @@ export default function NavBar({user, setUser}){
       <nav className="navText">
         { user ? 
           <>
+          
             <Link to="/">JEWELRY</Link>
             &nbsp; | &nbsp;
             <Link to ="/orders/cart">SHOPPING CART</Link> 
