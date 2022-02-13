@@ -38,6 +38,7 @@ Screen Shots of the App
  * Node
  * Mongoose
  * Express
+ * Canva
 
 ## Getting Started
  >Here is a link to my project:
