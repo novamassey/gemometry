@@ -36,10 +36,16 @@
 .ShoppingLink {
     font-family: 'Marcellus SC', serif;
     color:white;
-    
+}
+.ContShoppingLink {
+    font-family: 'Marcellus SC', serif;
+    color:white;
+    padding: 17px;
+
 }
 .CartCheckoutButton {
     font-family: 'Marcellus SC', serif;
     color: black;
     font-size:18px;
+    margin: 17px;
 }

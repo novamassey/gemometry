@@ -40,8 +40,10 @@ export default function OrderHistoryPage({user}){
       </>
       :  
       <>
+      <div className="NoOrders">
         <h3>You do have any orders with us yet, click below to start shopping!</h3>
-        <Link to="/">START SHOPPING</Link>
+        <Link className="StartShopping"to="/">START SHOPPING</Link>
+      </div>
       </> 
       } 
     </>    

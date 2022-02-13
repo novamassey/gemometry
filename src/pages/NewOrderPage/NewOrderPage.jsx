@@ -57,6 +57,8 @@ export default function NewOrderPage({user}) {
     <>
     {cart.lineItems.length ?
       <div className="CheckoutDiv">
+        <Link className="ContShoppingLink" to="/">CONTINUE SHOPPING</Link>
+        <br/>
         <button className="CartCheckoutButton" onClick={handleCheckout}>CHECKOUT</button>
       </div>
     : 

@@ -27,6 +27,8 @@
     font-family: 'Marcellus SC', serif;
     margin:10px;
     color: black;
-    
-   
+}
+.error-message {
+    color:white;
+    font-family: 'Marcellus SC', serif;
 }

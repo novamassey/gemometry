@@ -18,6 +18,15 @@
 
 .HistoryImage {
     height: 100px;
-    ; 
+     
+}
 
+.NoOrders {
+    color:white;
+    font-family: 'Marcellus SC', serif;
+}
+.StartShopping {
+    color:white;
+    font-family: 'Marcellus SC', serif;
+    text-decoration: none;
 }

@@ -24,3 +24,7 @@
     color:black;
     margin:10px;
 }
+.error-message {
+    color:white;
+    font-family: 'Marcellus SC', serif;
+}
