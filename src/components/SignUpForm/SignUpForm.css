@@ -3,7 +3,7 @@
     display:inline-block;
     grid-template-rows: 1fr;
     font-family: 'Marcellus SC', serif;
-    color:black;
+    color:white;
     width: 400px;
     margin: 0 auto;
    
@@ -11,6 +11,7 @@
 .SignUpLabel {
     display: inline-block;
     width: 30%;
+    color: white;
     
 }
 
@@ -25,6 +26,7 @@
     font-size:18px;
     font-family: 'Marcellus SC', serif;
     margin:10px;
+    color: black;
     
    
 }

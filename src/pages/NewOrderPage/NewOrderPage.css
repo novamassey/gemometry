@@ -2,7 +2,7 @@
     display:inline-block;
     grid-template-rows:inherit;
     font-family: 'Marcellus SC', serif;
-    color:black;
+    color:white;
 }
 .CartItemName {
     font-size: 22px;
@@ -29,14 +29,17 @@
     margin:0;
     padding:0;
     cursor: pointer;
+    color: white;
+    font-size:18px;
+
 }
 .ShoppingLink {
     font-family: 'Marcellus SC', serif;
-    color:black;
-    /* text-decoration: none;   */
+    color:white;
+    
 }
 .CartCheckoutButton {
     font-family: 'Marcellus SC', serif;
-    color:black;
+    color: black;
     font-size:18px;
 }
