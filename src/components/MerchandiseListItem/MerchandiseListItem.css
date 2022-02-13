@@ -40,5 +40,11 @@
     
 }
 
+@media only screen and (max-width: 375px) {
+    .imageCard {
+        height:75%;
+        width:75%;
+  }
+}
 
 

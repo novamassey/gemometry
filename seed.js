@@ -10,11 +10,11 @@ const Item = require('./models/item');
 
   await Item.deleteMany({});
   const items = await Item.create([
-    {name: 'Green Adventurine Starburst', 
+    {name: 'Magnesite Bibb', 
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nisi consequatur ab facilis modi ipsum, dolores dolorem repudiandae reiciendis unde magnam quo asperiores delectus corrupti repellat provident placeat, omnis error',  
-    price: 30, 
+    price: 50, 
     img_url_list: 'https://i.imgur.com/pG5urVR.png',
-    img_url_detail: 'https://i.imgur.com/AqvNVrF.jpg',
+    img_url_detail: 'https://i.imgur.com/JEdrjw6.jpg',
     img_url_detail_extra:''},
     {name: 'Cobalt Blue Bibb',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nisi consequatur ab facilis modi ipsum, dolores dolorem repudiandae reiciendis unde magnam quo asperiores delectus corrupti repellat provident placeat, omnis error',  
@@ -37,7 +37,7 @@ const Item = require('./models/item');
     {name: 'Red Adventurine Bibb', 
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nisi consequatur ab facilis modi ipsum, dolores dolorem repudiandae reiciendis unde magnam quo asperiores delectus corrupti repellat provident placeat, omnis error',  
     price: 45, 
-    img_url_list: 'https://i.imgur.com/pG5urVR.png',
+    img_url_list: 'https://i.imgur.com/DzrA5qD.png',
     img_url_detail: 'https://i.imgur.com/DzrA5qD.png',
     img_url_detail_extra:''},
     {name: 'Magnesite Bibb', 
