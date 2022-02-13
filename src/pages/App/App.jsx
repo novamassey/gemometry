@@ -39,6 +39,7 @@ function App() {
       </Routes>
       </>
       }
+      <footer><a href=""></a></footer>
     </main>
   );
 }
