@@ -58,7 +58,7 @@ export default function MerchandiseDetailPage({user}) {
         </div>
         <div className="DetailImage">
           {image && <img onClick={handleChangeImage}src={itemSingle && itemSingle.img_url_detail} />}
-          {!image  && <img onClick={handleChangeImage} src={itemSingle && itemSingle.img_url_list} />}
+          {!image  && <img onClick={handleChangeImage} src={itemSingle && itemSingle.img_url_detail_extra} />}
         </div>
         { user ?
           <button className="detailButton" onClick={()=>handleAddToCart(itemSingle._id)} >ADD TO  CART</button>
