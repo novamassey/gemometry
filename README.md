@@ -52,6 +52,6 @@ Screen Shots of the App
 * I would like for users who have made purchases to be able to create, edit and delete reviews on their merchandise purchase.
 * I would like to implement the Stripe API to allow for actual purchases.
 * I would like to create an admin user that can create new posts for items for sale.
-* I would like to have a message capability so customers can iniate returns with the buyer/admin.
+* I would like to have a message capability so customers can initiate returns with the buyer/admin.
 
 
