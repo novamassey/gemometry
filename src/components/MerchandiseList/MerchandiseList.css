@@ -1,8 +1,13 @@
 .container {
-    display: inline-grid;
-    grid-gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
-    
+  display: inline-grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-
+@media only screen and (max-width: 390px) {
+  .container {
+    display: inline-grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}

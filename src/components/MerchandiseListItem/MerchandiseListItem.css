@@ -1,47 +1,40 @@
-
 #imageID:hover {
-    transition: all .3s ease-out; 
-    background-color: rgba(0, 0, 0, .5);
-} 
+  transition: all 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-.image-title:hover{
-    color: rgba(255, 255, 255, 1);
-    z-index:1;
-    font-size: 20px;
+.image-title:hover {
+  color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  font-size: 20px;
 }
 
 .imageCard {
-    height: 200px;
-    width: 250px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 1);
-    margin:30px;
-    
+  height: 200px;
+  width: 250px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 1);
+  margin: 30px;
 }
 
-.imageCard:hover{
-    background-color: rgba(255, 255, 255, 0);
-    transition: all .3s ease-out;
-   
+.imageCard:hover {
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-out;
 }
-
 
 .image-title {
-    line-height: 200px;
-    font-size:40px;
-    color: rgba(0, 0, 0, 0);
-    transition: all .8s ease-in;
-    font-size:0%;
-    text-decoration: none;
-    font-family: 'Marcellus SC', serif;
-    
+  line-height: 200px;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0);
+  transition: all 0.8s ease-in;
+  font-size: 0%;
+  text-decoration: none;
+  font-family: "Marcellus SC", serif;
 }
 
 @media only screen and (max-width: 375px) {
-    .imageCard {
-        height:75%;
-        width:75%;
+  .imageCard {
+    height: 75%;
+    width: 75%;
   }
 }
-
-
