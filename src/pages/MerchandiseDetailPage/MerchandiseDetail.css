@@ -62,4 +62,8 @@
     position: static;
     margin-left: 140px;
   }
+  .LinkDetail {
+    position: static;
+    margin-left: 70px;
+  }
 }

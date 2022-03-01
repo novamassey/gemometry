@@ -37,10 +37,13 @@ nav {
     max-height: auto;
   }
   .navText > a {
-    font-size: 18px;
+    font-size: 12px;
     text-align: center;
   }
   hr {
+    display: none;
+  }
+  span {
     display: none;
   }
 }

@@ -1,34 +1,37 @@
 .SignUpForm {
-    margin-top: 200px;
-    display:inline-block;
-    grid-template-rows: 1fr;
-    font-family: 'Marcellus SC', serif;
-    color:white;
-    width: 400px;
-    margin: 0 auto;
-   
+  margin-top: 200px;
+  display: inline-block;
+  grid-template-rows: 1fr;
+  font-family: "Marcellus SC", serif;
+  color: white;
+  width: 400px;
+  margin: 0 auto;
 }
 .SignUpLabel {
-    display: inline-block;
-    width: 30%;
-    color: white;
-    
+  display: inline-block;
+  width: 30%;
+  color: white;
 }
 
 .SignInput {
-    display: inline-block;
-    width: 30%;
-    margin: 0 30% 0 4%;
-   
+  display: inline-block;
+  width: 30%;
+  margin: 0 30% 0 4%;
 }
 
 .SignUpButton {
-    font-size:18px;
-    font-family: 'Marcellus SC', serif;
-    margin:10px;
-    color: black;
+  font-size: 18px;
+  font-family: "Marcellus SC", serif;
+  margin: 10px;
+  color: black;
 }
 .error-message {
-    color:white;
-    font-family: 'Marcellus SC', serif;
+  color: white;
+  font-family: "Marcellus SC", serif;
+}
+
+@media only screen and (max-width: 390px) {
+  .SignUpForm {
+    margin-left: -50px;
+  }
 }
