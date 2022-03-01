@@ -56,9 +56,10 @@
     width: 339px;
     margin-left: -185px;
     margin-top: 100px;
+    margin-bottom: -135px;
   }
   .detailButton {
-    /* position: relative; */
-    margin-bottom: 0px;
+    position: static;
+    margin-left: 140px;
   }
 }
